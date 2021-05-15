@@ -120,4 +120,4 @@ source /opt/ros/noetic/setup.bash
 #Lidar
 source ~/gitClone/ydlidar_ws/devel/setup.bash
 #Cartographer
-source ~/catkin_ws/devel_isolated/setup.bash
+source ~/catkin_ws/install_isolated/setup.bash
