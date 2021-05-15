@@ -1,5 +1,9 @@
 # SLAM_Cartographer
-Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
+Ubuntu 20.04+ROS_Noetic+Cartographer
+
+- [x] EAI X4 Lidar
+
+- [ ] JY901 IMU
 
 ## 配置环境
 
