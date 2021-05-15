@@ -141,8 +141,8 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
       > mkdir catkin_ws
       > cd catkin_ws
       > wstool init src
-
-   ![image-001](ScreenShots/001-创建工作环境.png)
+      
+      ![image-001](ScreenShots/001-创建工作环境.png)
 
    3. 获取source
    ![image-002](ScreenShots/002-设定cloning地址.png)
