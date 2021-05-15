@@ -9,11 +9,13 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
 
 尝试过Rasspbery Pi 4B + [Ubuntu mate 20.04_Release](https://releases.ubuntu-mate.org/20.04/armhf/) or [offical site](https://ubuntu-mate.org/download/arm64/focal/) 和 [Ubuntu 18.04.5 LTS (Bionic Beaver)](http://cdimage.ubuntu.com/releases/18.04/release/)
 
-​	推荐使用 **ubuntu-mate-20.04.1-desktop-arm64+raspi.img.xz** 
+​	推荐使用 **ubuntu-mate-20.04.1-desktop-arm64+raspi.img.xz**
 
-		1. 有mate轻量级桌面
-  		2. wifi好配置
-  		3. 支持ROS noetic
+1.有mate轻量级桌面
+
+2.wifi好配置
+
+3.支持ROS noetic
 
 ​	如果使用 **ubuntu-18.04.5-preinstalled-server-arm64+raspi4.img.xz** 
 
@@ -42,7 +44,6 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
 >      "WIFI名称": 
 >           password: "密码"
 >       dhcpd: true
->       optional: true
 
 >sudo netplan debug
 >
