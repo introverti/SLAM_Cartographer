@@ -145,8 +145,7 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
    ![image-001](ScreenShots/001-创建工作环境.png)
 
    3. 获取source
-
-      ![image-002](ScreenShots/002-设定cloning地址.png)
+   ![image-002](ScreenShots/002-设定cloning地址.png)
 
       > wstool merge -t src https://raw.githubusercontent.com/cartographer-project/cartographer_ros/master/cartographer_ros.rosinstall
       > wstool update -t src
