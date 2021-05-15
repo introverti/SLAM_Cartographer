@@ -1,7 +1,7 @@
 # SLAM_Cartographer
 Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
 
-## 安装环境
+## 配置环境
 
 ### Ubuntu 的安装
 
@@ -126,4 +126,8 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
 
    ### Cartographer 安装及编译
 
-   
+   参考:[官方教程](https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html#)
+
+   1. 创建工作环境
+
+      ![image](/home/xavier/gitClone/SLAM_Cartographer/ScreenShots/001-创建工作环境.png)
