@@ -198,5 +198,6 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
       > source install_isolated/setup.bash
       >
       > #或者 ~/.bashrc 文件中添加 注意对应地址
+      >
       > source ~/catkin_ws/install_isolated/setup.bash
 
