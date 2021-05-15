@@ -115,6 +115,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+#ROS
 source /opt/ros/noetic/setup.bash
+#Lidar
 source ~/gitClone/ydlidar_ws/devel/setup.bash
+#Cartographer
 source ~/catkin_ws/devel_isolated/setup.bash
