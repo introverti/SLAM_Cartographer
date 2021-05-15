@@ -130,5 +130,5 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
 
    1. 创建工作环境
 
-      ![image](https://github.com/introverti/SLAM_Cartographer/tree/main/ScreenShots/001-创建工作环境.png)
+      ![image](ScreenShots/001-创建工作环境.png)
 
