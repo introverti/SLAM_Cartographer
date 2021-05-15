@@ -200,4 +200,12 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
       > #或者 ~/.bashrc 文件中添加 注意对应地址
       >
       > source ~/catkin_ws/install_isolated/setup.bash
-
+      
+   8. 下载使用官方实例
+   
+      > #2D包,约500MB,需要科学上网
+      >
+      > wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag
+      > roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
+   
+      ![image-007](ScreenShots/007-建图实例.png)
