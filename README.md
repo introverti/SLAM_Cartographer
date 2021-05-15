@@ -64,9 +64,66 @@ Ubuntu 20.04+ROS_Noetic+Cartographer+EAIX4Lidar+JY901 and more
 
 ###   ROS的安装
 
-默认安装 ROS noetic 版本，不同版本在安装是需要注意修改commands 中的版本名称
+1. 参考[官方教程](http://wiki.ros.org/noetic/Installation/Ubuntu), 默认安装 ROS noetic 版本,不同版本在安装时需要注意修改commands 中的版本名称:
 
+   > #将commands 中的 :
+   >
+   > ${ROS_DISTRO} 
+   >
+   > #替换成对应的版本名 kinetic || melodic  || noetic
 
+2. 获取source.list 和 Key,推荐使用默认的源(即下方命令行),可能需要科学上网，[其他镜像](http://wiki.ros.org/ROS/Installation/UbuntuMirrors)
 
+   > sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+   >
+   > sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+   >
+   > sudo apt update
+   >
+   > #安装完整的ROS 如果有特殊需求 参考官方教程
+   >
+   > sudo apt install ros-noetic-desktop-full
 
+​	:warning:此处可能会提示无法找到Release 文件，考虑切换源，或更换推荐的Ubuntu及ROS版本
 
+3. 路径脚本
+
+   > #在每个要运行ROS程序的console 都要使用如下命令行
+   >
+   > source /opt/ros/noetic/setup.bash
+   >
+   > #一劳永逸
+   >
+   > echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+   > source ~/.bashrc
+
+4. 安装依赖项
+
+   > sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+   >
+   > sudo apt install python3-rosdep
+
+5. 初始化并更新
+
+   :warning:如果此处进行过 init操作,安装Cartographer时就不要再重复了,会报错
+
+   > sudo rosdep init
+   > rosdep update
+
+6. 确认脚本
+
+   > #用 gvim|| vim||nano 等编辑器打开脚本
+   >
+   > sudo gvim ~/.bashrc
+   >
+   > #脚本最后应该有
+   >
+   > source /opt/ros/noetic/setup.bash
+   >
+   > #运行脚本
+   >
+   > source ~/.bashrc
+
+   ### Cartographer 安装及编译
+
+   
