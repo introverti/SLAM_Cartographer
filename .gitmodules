@@ -1,3 +1,6 @@
 [submodule "3rdparty/YDLidar-SDK"]
 	path = 3rdparty/YDLidar-SDK
 	url = git@github.com:YDLIDAR/YDLidar-SDK.git
+[submodule "3rdparty/ydlidar_ros_driver"]
+	path = 3rdparty/ydlidar_ros_driver
+	url = git@github.com:YDLIDAR/ydlidar_ros_driver.git
