@@ -44,14 +44,21 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
     ![image-008](ScreenShots/008-netplan.png)
     
     > #调试配置文件，如果输入错误会有报错，根据报错修改
+    >
     > sudo netplan try
+    >
     > #应用配置文件
+    >
     > sudo netplan apply
+    >
     > #执行完这一步 wifi就应该连接成功了
     
     > #更新系统 并安装Ubuntu界面 （耗时较长）也可以选择其他图形化界面比如：mate
+    >
     > sudo apt-get update 
+    >
     > sudo apt-get dist-upgrade -y 
+    >
     > sudo apt-get install ubuntu-desktop -y
 
 ###   ROS的安装
