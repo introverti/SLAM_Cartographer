@@ -161,30 +161,33 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
       > rosdep update
       >
       > #这里下载时间较长
+      >
       > #rosdep install --from-paths src --ignore-src --rosdistro=noetic -y
       >
       > rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y 
       >
       > #安装完成显示：#All required rosdeps installed successfully
-   
+
       ![image-005](ScreenShots/005-安装完成.png)
-   
+
    5. 安装abseil-cpp
    
       > src/cartographer/scripts/install_abseil.sh
       >
       > #你**可能**需要删除ros自带的abseil-app防止冲突
+      >
       > #sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp
+      >
       > #ex:sudo apt-get remove ros-noetic-abseil-cpp
-   
+
    6. 编译
-   
+
       :warning::warning::warning:最重要最关键的一步,编译过程较为缓慢
-   
+
       > catkin_make_isolated --install --use-ninja
-   
+
       :warning::warning::warning: 一定要使用上面的命令行编译Cartographer 所在的工作环境, 在将来增添了雷达，IMU等驱动之后,也要使用此命令行,不然会报cmake的相关错误
-   
+
       ![image-006](ScreenShots/006-编译完成.png)
    
    7. 添加环境
