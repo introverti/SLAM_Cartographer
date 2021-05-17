@@ -115,9 +115,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-#ROS
+
+# echo $ROS_PACKAGE_PATH
+
 source /opt/ros/noetic/setup.bash
-#Lidar
-source ~/gitClone/ydlidar_ws/devel/setup.bash
-#Cartographer
+#/opt/ros/noetic/share
+
 source ~/catkin_ws/install_isolated/setup.bash
+#/home/xavier/catkin_ws/install_isolated/share:/opt/ros/noetic/share\
+
+source ~/gitClone/ydlidar_ws/devel/setup.bash
+#/home/xavier/gitClone/ydlidar_ws/src:/home/xavier/catkin_ws/install_isolated/share:/opt/ros/noetic/share
