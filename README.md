@@ -37,7 +37,7 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
 
  3. :signal_strength:*Ubuntu server 配置wifi 以及安装界面* 
 
-    ![image-008](ScreenShots/008-netplan.png)
+    ![image-008](images/008-netplan.png)
     
     > #调试配置文件，如果输入错误会有报错，根据报错修改
     >
@@ -137,10 +137,10 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
       > cd catkin_ws
       > wstool init src
       
-      ![image-001](ScreenShots/001-创建工作环境.png)
+      ![image-001](images/001-创建工作环境.png)
 
    3. 获取source
-     ![image-002](ScreenShots/002-设定cloning地址.png)
+       ![image-002](images/002-设定cloning地址.png)
 
      > wstool merge -t src https://raw.githubusercontent.com/cartographer-project/cartographer_ros/master/cartographer_ros.rosinstall
      >
@@ -148,11 +148,11 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
      >
      > #如果出现fatal：Failed to connect to github.com port 443: connection refused，是因为要科学上网
    
-     ![image-003](ScreenShots/003-cloing完成.png)
+     ![image-003](images/003-cloing完成.png)
    
    4. 安装rosdep
    
-      ![image-004](ScreenShots/004-更新rosdep.png)
+      ![image-004](images/004-更新rosdep.png)
    
       > #安装ROS时initialize过会报错，可以无视
       >
@@ -168,7 +168,7 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
       >
       > #安装完成显示：#All required rosdeps installed successfully
 
-      ![image-005](ScreenShots/005-安装完成.png)
+      ![image-005](images/005-安装完成.png)
 
    5. 安装abseil-cpp
    
@@ -188,7 +188,7 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
 
       :warning::warning::warning: 一定要使用上面的命令行编译Cartographer 所在的工作环境, 在将来增添了雷达，IMU等驱动之后,也要使用此命令行,不然会报cmake的相关错误
 
-      ![image-006](ScreenShots/006-编译完成.png)
+      ![image-006](images/006-编译完成.png)
    
    7. 添加环境
    
@@ -208,4 +208,4 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
       >
       > roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
       
-      ![image-007](ScreenShots/007-建图实例.png)
+      ![image-007](images/007-建图实例.png)
