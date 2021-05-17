@@ -42,17 +42,17 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
     > sudo vim /etc/netplan/50-cloud-init.yaml
     
     > #修改yaml文件如下：
-    >
     > network:
-    > version: 2
-    > ethernets:
+    >    version: 2
+    >    ethernets:
     > 	………………(此处不用修改已省略）
-    > wifis:
-    >     wlan0:
-    >         dhcp4: true
-    >         access-points:
-    >             "wifi名称":
-    >                 password: "wifi密码"
+    >    wifis:
+    >        wlan0:
+    >            dhcp4: true
+    >            access-points:
+    >                "wifi名称":
+    >                    password: "wifi密码"
+    >
     > #注意 wifis和 ethernets对齐 如果输入正确 关键词都会染色高亮
     
     > #调试配置文件，如果输入错误会有报错，根据报错修改
