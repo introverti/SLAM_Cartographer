@@ -40,7 +40,7 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
     > #yaml 文件名称可能有所差异
     >
     > sudo vim /etc/netplan/50-cloud-init.yaml
-    
+    >
     > #修改yaml文件如下：
     > network:
     >    version: 2
