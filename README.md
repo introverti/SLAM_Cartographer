@@ -73,7 +73,7 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
 
 2. 获取source.list 和 Key,推荐使用默认的源(即下方命令行),可能需要科学上网，[其他镜像](http://wiki.ros.org/ROS/Installation/UbuntuMirrors)
 
-   > sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+   > sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'\
    >
    > sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
    >
@@ -144,19 +144,20 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
       ![image-001](ScreenShots/001-创建工作环境.png)
 
    3. 获取source
-   ![image-002](ScreenShots/002-设定cloning地址.png)
+     ![image-002](ScreenShots/002-设定cloning地址.png)
 
-      > wstool merge -t src https://raw.githubusercontent.com/cartographer-project/cartographer_ros/master/cartographer_ros.rosinstall
-      > wstool update -t src
-      >
-      > #如果出现fatal：Failed to connect to github.com port 443: connection refused，是因为要科学上网
-
-      ![image-003](ScreenShots/003-cloing完成.png)
-
+     > wstool merge -t src https://raw.githubusercontent.com/cartographer-project/cartographer_ros/master/cartographer_ros.rosinstall
+     >
+     > wstool update -t src
+     >
+     > #如果出现fatal：Failed to connect to github.com port 443: connection refused，是因为要科学上网
+   
+     ![image-003](ScreenShots/003-cloing完成.png)
+   
    4. 安装rosdep
-
+   
       ![image-004](ScreenShots/004-更新rosdep.png)
-
+   
       > #安装ROS时initialize过会报错，可以无视
       >
       > sudo rosdep init
@@ -169,29 +170,29 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
       > rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y 
       >
       > #安装完成显示：#All required rosdeps installed successfully
-
+   
       ![image-005](ScreenShots/005-安装完成.png)
-
+   
    5. 安装abseil-cpp
-
+   
       > src/cartographer/scripts/install_abseil.sh
       >
       > #你**可能**需要删除ros自带的abseil-app防止冲突
       > #sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp
       > #ex:sudo apt-get remove ros-noetic-abseil-cpp
-
+   
    6. 编译
-
+   
       :warning::warning::warning:最重要最关键的一步,编译过程较为缓慢
-
+   
       > catkin_make_isolated --install --use-ninja
-
+   
       :warning::warning::warning: 一定要使用上面的命令行编译Cartographer 所在的工作环境, 在将来增添了雷达，IMU等驱动之后,也要使用此命令行,不然会报cmake的相关错误
-
+   
       ![image-006](ScreenShots/006-编译完成.png)
-
+   
    7. 添加环境
-
+   
       > #在每个运行Cartographer程序的console 都要使用如下命令行
       >
       > source install_isolated/setup.bash
@@ -205,6 +206,7 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
       > #2D包,约500MB,需要科学上网
       >
       > wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag
+      >
       > roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
-   
+      
       ![image-007](ScreenShots/007-建图实例.png)
