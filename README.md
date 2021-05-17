@@ -37,10 +37,6 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
 
  3. :signal_strength:*Ubuntu server 配置wifi 以及安装界面* 
 
-    > #yaml 文件名称可能有所差异
-    >
-    > sudo vim /etc/netplan/50-cloud-init.yaml
-    
     ![image-008](ScreenShots/008-netplan.png)
     
     > #调试配置文件，如果输入错误会有报错，根据报错修改
