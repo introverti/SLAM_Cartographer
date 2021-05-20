@@ -216,24 +216,35 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
 
 EAI X4 Lidar:
 
-详细教学可以参考[EAI的YDLIDAR-X4激光雷达在ROS下使用方法](https://www.corvin.cn/686.html)
+​	详细教学可以参考[EAI的YDLIDAR-X4激光雷达在ROS下使用方法](https://www.corvin.cn/686.html)
 
-但是驱动建议使用新版,要先安装 [YDLidar-SDK](https://github.com/YDLIDAR/YDLidar-SDK)
+​	但是驱动建议使用新版,因为老版本的驱动提供的时间戳不合理
 
-之后就可以安装 [ydlidar-ros-driver](https://github.com/YDLIDAR/ydlidar_ros_driver)
+​	要先安装 [YDLidar-SDK](https://github.com/YDLIDAR/YDLidar-SDK)
+
+​	之后就可以安装 [ydlidar-ros-driver](https://github.com/YDLIDAR/ydlidar_ros_driver)
+
+
 
 JY901 IMU + CH340串口转换: [jy901-imu-ros](https://github.com/introverti/jy901-imu-ros/tree/e18fc1544f0f77b1b4338658187de93f58a36d5c)
 
-这个IMU模块的驱动是[Maggie](https://github.com/maggielovedd)用Python编写的,我fork了他的项目,并作了一些修改:
+​	这个IMU模块的驱动是[Maggie](https://github.com/maggielovedd)用Python编写的,我fork了他的项目,并作了一些修改:
 
-1. 使程序适配于纯Python3的环境
-2. 更改了Package, Topic 和 node的名字,更容易在ROS环境中使用
+   			1. 使程序适配于纯Python3的环境
+   			2. 更改了Package, Topic 和 node的名字,更容易在ROS环境中使用
+
+
 
 上述三个git项目,也可以在第三方库 [3rdparty](https://github.com/introverti/SLAM_Cartographer/tree/main/3rdparty)中找到
 
-:warning::warning::warning: 如果将驱动和Cartographer放在同一工作环境下, 一定要使用下面的命令行编译
+:warning::warning::warning: 如果将驱动和Cartographer放在同一工作环境下, 一定要使用下面的命令行编译:
 
 > catkin_make_isolated --install --use-ninja
 
+如果没有放在同一路径下，则要在.barshc 文件中添加相应路径 例如:
 
-
+> source ~/gitClone/ydlidar_ws/devel/setup.bash
+>
+> #/home/xavier/gitClone/ydlidar_ws/src:/home/xavier/catkin_ws/install_isolated/share:/opt/ros/noetic/share
+>
+> #如果工作环境的上级文件夹不是在/user/目录下，还需要手动更改对应的路径，不能直接使用驱动提供的initenv.sh 脚本添加路径
