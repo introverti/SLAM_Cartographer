@@ -245,6 +245,8 @@ JY901 IMU + CH340串口转换: [jy901-imu-ros](https://github.com/introverti/jy9
 
 > source ~/gitClone/ydlidar_ws/devel/setup.bash
 >
+> #我的所有环境路径
+>
 > #/home/xavier/gitClone/ydlidar_ws/src:/home/xavier/catkin_ws/install_isolated/share:/opt/ros/noetic/share
 >
 > #如果工作环境的上级文件夹不是在/user/目录下，还需要手动更改对应的路径，不能直接使用驱动提供的initenv.sh 脚本添加路径
