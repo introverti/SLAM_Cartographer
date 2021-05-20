@@ -209,3 +209,16 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
       > roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
       
       ![image-007](images/007-建图实例.png)
+
+
+
+### 雷达驱动和IMU驱动
+
+详细教学可以参考[EAI的YDLIDAR-X4激光雷达在ROS下使用方法](https://www.corvin.cn/686.html)
+
+但是驱动建议使用新版,要先安装 [YDLidar-SDK](https://github.com/YDLIDAR/YDLidar-SDK)
+
+之后就可以安装 [ydlidar-ros-driver](https://github.com/YDLIDAR/ydlidar_ros_driver)
+
+上述两个git项目,也可以在第三方库 [3rdparty](https://github.com/introverti/SLAM_Cartographer/tree/main/3rdparty)中找到
+
