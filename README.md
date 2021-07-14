@@ -91,6 +91,10 @@ Ubuntu 20.04+ROS_Noetic+Cartographer
    >
    > echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
    > source ~/.bashrc
+   >
+   > #ROS 2 使用下面的命令查看详细信息
+   >
+   > printenv | grep -i ROS
 
 4. 安装依赖项
 
